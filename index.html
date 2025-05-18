@@ -11,19 +11,19 @@
     <link rel="icon" href="http://img.lrp.pp.ua/u/HqBF0F.png" type="image/png">
 
     <meta name="description" content="PixieeeeBot is a high-quality Discord music bot offering advanced features like playlist support, custom filters, and multi-platform streaming. Elevate your Discord experience now!">
-    <meta name="keywords" content="Discord Music Bot, PixieeeeBot, Best Discord Bot, Spotify Bot, YouTube Music Bot, SoundCloud Bot, Playlist Support, Music Filters, Discord DJ">
+    <meta name="keywords" content="Discord Music Bot, PixieeeeBot, Best Discord Bot, Spotify Bot, YouTube Music Bot, SoundCloud Bot, Apple Bot, Deezer Bot, Jio Saavn Bot, Youtube Bot, Playlist Support, Music Filters, Discord DJ">
     <meta name="author" content="Pixel Nomad">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="PixieeeeBot - The Ultimate Discord Music Bot">
-    <meta property="og:description" content="Enjoy high-quality music with PixieeeeBot on Discord. Play from YouTube, Spotify, SoundCloud, and more.">
+    <meta property="og:description" content="Enjoy high-quality music with PixieeeeBot on Discord. Play from YouTube, YouTube-Music, Apple, Deezer, Jio Saavn, Spotify, SoundCloud, and more.">
     <meta property="og:image" content="https://img.lrp.pp.ua/u/HqBF0F.png">
     <meta property="og:url" content="https://pixieeee-bot.multidomain.xyz/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PixieeeeBot - The Ultimate Discord Music Bot">
-    <meta name="twitter:description" content="Enjoy high-quality music with PixieeeeBot on Discord. Play from YouTube, Spotify, SoundCloud, and more.">
+    <meta name="twitter:description" content="Enjoy high-quality music with PixieeeeBot on Discord. Play from YouTube, YouTube-Music, Apple, Deezer, Jio Saavn, Spotify, SoundCloud, and more.">
     <meta name="twitter:image" content="https://img.lrp.pp.ua/u/HqBF0F.png">
 
     <style>
@@ -161,9 +161,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showSection('commands')">Commands</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showSection('filters')">Filters</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showSection('faq')">FAQ</a>
                     </li>
@@ -208,7 +208,7 @@
                     <p>With support for multiple platforms, high-quality audio, and a wide range of commands, PixieeeeBot will keep your server entertained for hours.</p>
                     <ul class="list-unstyled">
                         <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>High quality audio streaming</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Support for YouTube, Spotify, SoundCloud and more</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Support for YouTube, YouTube-Music, Apple, Deezer, Jio Saavn, Spotify, SoundCloud</li>
                         <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Command less music search system</li>
                         <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Customizable audio filters</li>
                         <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Playlist support</li>
@@ -239,7 +239,7 @@
     <!-- Commands Section -->
     <section id="commands" class="page-section">
         <div class="container-fluid">
-            <h2 class="text-center fw-bold mt-5 mb-5">Bot Commands | Prefix ==Command</h2>
+            <h2 class="text-center fw-bold mt-5 mb-5">Bot Commands | Prefix ==Command or /slash</h2>
             
             <div class="row ms-5 me-5">
                 <div class="col-md-6">
@@ -251,7 +251,7 @@
                                     <th>Command</th>
                                     <th>Aliases</th>
                                     <th>Description</th>
-                                    <th>DJ Only</th>
+                                    <th>DJ Only (If DJ mode Enabled)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -260,6 +260,18 @@
                                     <td>c</td>
                                     <td>Clears filter/queue.</td>
                                     <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>favorites</code></td>
+                                    <td>fav, fv, favorite</td>
+                                    <td>Shows your favorites</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td><code>deletefavorites</code></td>
+                                    <td>dfav, dfv, deletefavorite</td>
+                                    <td>Delete your favorites</td>
+                                    <td>No</td>
                                 </tr>
                                 <tr>
                                     <td><code>forward</code></td>
@@ -340,9 +352,21 @@
                                     <td>Yes</td>
                                 </tr>
                                 <tr>
+                                    <td><code>search-apple</code></td>
+                                    <td>ase, apple</td>
+                                    <td>Searches song from Apple.</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
                                     <td><code>search-deezer</code></td>
                                     <td>dse, deezer</td>
                                     <td>Searches song from deezer.</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>search-jiosaavn</code></td>
+                                    <td>jsse, jiosaavn, jio-saavn</td>
+                                    <td>Searches song from Jio Saavn.</td>
                                     <td>Yes</td>
                                 </tr>
                                 <tr>
@@ -355,6 +379,12 @@
                                     <td><code>search-spotify</code></td>
                                     <td>sse, spotify</td>
                                     <td>Searches song from spotify.</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>search-youtube-music</code></td>
+                                    <td>ymse, youtubemusic, ytm</td>
+                                    <td>Searches song from youtube Music.</td>
                                     <td>Yes</td>
                                 </tr>
                                 <tr>
@@ -424,6 +454,12 @@
                                     <td>No</td>
                                 </tr>
                                 <tr>
+                                    <td><code>musicsupport</code></td>
+                                    <td>ms</td>
+                                    <td>Shows bot’s Supported music platforms.</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
                                     <td><code>ping</code></td>
                                     <td>pong</td>
                                     <td>Shows the latency of the bot.</td>
@@ -437,13 +473,13 @@
                                 </tr>
                                 <tr>
                                     <td><code>stats</code></td>
-                                    <td>info</td>
+                                    <td></td>
                                     <td>Shows a deep status of the bot.</td>
                                     <td>No</td>
                                 </tr>
                                 <tr>
                                     <td><code>247</code></td>
-                                    <td>24/7, 24h</td>
+                                    <td></td>
                                     <td>Toggles 24/7 mode.</td>
                                     <td>Administrator,<br> Manage Server</td>
                                 </tr>
@@ -841,7 +877,7 @@
         
         // Initialize the page with home section visible
         document.addEventListener('DOMContentLoaded', function() {
-            showSection('home');
+            showSection('commands');
             
             // Auto-update year and date
             document.getElementById('currentYear').textContent = new Date().getFullYear();
